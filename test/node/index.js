@@ -18,7 +18,8 @@ series([
   test(require.resolve('./log')),
   test(require.resolve('./promisify')),
   test(require.resolve('./callbackify')),
-  test(require.resolve('./types'))
+  test(require.resolve('./types')),
+  test(require.resolve('./text-encoding'))
 ], function (err) {
   if (err) throw err
 });
