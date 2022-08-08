@@ -713,3 +713,7 @@ function callbackify(original) {
   return callbackified;
 }
 exports.callbackify = callbackify;
+
+const textEncoding = require('text-encoding-polyfill');
+exports.TextEncoder = textEncoding.TextEncoder;
+exports.TextDecoder = textEncoding.TextDecoder;
