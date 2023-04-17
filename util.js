@@ -717,3 +717,10 @@ exports.callbackify = callbackify;
 const textEncoding = require('text-encoding-polyfill');
 exports.TextEncoder = textEncoding.TextEncoder;
 exports.TextDecoder = textEncoding.TextDecoder;
+
+Object.defineProperty(global, 'TextEncoder', {
+  value: textEncoding.TextEncoder,
+  writable: true,
+  enumerable: false,
+  configurable: true,
+});
